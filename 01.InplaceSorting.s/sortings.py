@@ -49,20 +49,20 @@ def merge_sort(data: CompSwapList[Any]):
         
         while i < mid and j < right:
             if data.less(j, i): 
-                data.set(k, buffer[j])
+                data[k] = buffer[i]
                 j += 1
             else:
-                data.set(k, buffer[i])
+                data[k] = buffer[i]
                 i += 1
             k += 1
             
         while i < mid:
-            data.set(k, buffer[i])
+            data[k] = buffer[i]
             i += 1
             k += 1
             
         while j < right:
-            data.set(k, buffer[j])
+             data[k] = buffer[i]
             j += 1
             k += 1
 
