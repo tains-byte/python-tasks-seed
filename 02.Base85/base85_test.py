@@ -1,4 +1,4 @@
-from encode_decode import encode, decode
+from .encode_decode import encode, decode
 
 def test_encode():
     assert encode(b"") == b"", "Empty input"
