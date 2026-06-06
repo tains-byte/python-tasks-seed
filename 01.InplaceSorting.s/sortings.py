@@ -86,3 +86,5 @@ def selection_sort(data: CompSwapList[Any]):
 
         if min_idx != i:
             data.swap(i, min_idx)
+
+
