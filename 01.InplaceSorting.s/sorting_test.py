@@ -16,7 +16,7 @@ def fatal_array():
 
     data = list(range(1000))
     r.shuffle(data)
-    yield CompSwapList(data)
+    return CompSwapList(data)
 
 @pytest.fixture
 def empty_data():
@@ -40,7 +40,7 @@ def duplicates():
     r.seed(3425)
     data = list(range(100))+list(range(100))+list(range(1000))
     r.shuffle(data)
-    yield CompSwapList(data)
+    return CompSwapList(data)
 
 @pytest.fixture
 def two_elements():
