@@ -62,7 +62,7 @@ def merge_sort(data: CompSwapList[Any]):
             k += 1
             
         while j < right:
-             data[k] = buffer[i]
+            data[k] = buffer[i]
             j += 1
             k += 1
 
