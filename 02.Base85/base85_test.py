@@ -1,20 +1,20 @@
 from encode_decode import encode, decode
 
 def test_encode():
-    assert encode(b"") == b"",       "Empty input"
-    assert encode(b"1") == b"F#",     "Single byte"
-    assert encode(b"12") == b"F){",    "Two bytes"
-    assert encode(b"123") == b"F)}j",   "Three bytes"
-    assert encode(b"1234") == b"F)}kW",  "Four bytes"
+    assert encode(b"") == b"", "Empty input"
+    assert encode(b"1") == b"F#", "Single byte"
+    assert encode(b"12") == b"F){", "Two bytes"
+    assert encode(b"123") == b"F)}j", "Three bytes"
+    assert encode(b"1234") == b"F)}kW", "Four bytes"
     print("Encode tests passed")
 
 
 def test_decode():
-    assert decode(b"")    == b"",       "Empty input"
-    assert decode(b"F#")  == b"1",      "Decode 'F#'"
-    assert decode(b"F){") == b"12",     "Decode 'F){'"
-    assert decode(b"F)}j")== b"123",    "Decode 'F)}j'"
-    assert decode(b"F)}kW")== b"1234",  "Decode 'F)}kW'"
+    assert decode(b"")    == b"", "Empty input"
+    assert decode(b"F#")  == b"1", "Decode 'F#'"
+    assert decode(b"F){") == b"12", "Decode 'F){'"
+    assert decode(b"F)}j")== b"123", "Decode 'F)}j'"
+    assert decode(b"F)}kW")== b"1234", "Decode 'F)}kW'"
     print("Decode tests passed")
 
 
