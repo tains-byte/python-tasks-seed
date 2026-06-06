@@ -43,7 +43,7 @@ def merge_sort(data: CompSwapList[Any]):
         _merge_sort(mid, right)
         
         for i in range(left, right):
-            buffer[i] = data.get(i)
+            buffer[i] = data[i]
             
         i, j, k = left, mid, left
         
