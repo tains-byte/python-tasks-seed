@@ -47,11 +47,11 @@ def two_elements():
     return CompSwapList([2, 1])
 
     
-Case = ["fatal_array", "empty_data", "single_element", "reversed_data", "already_sorted", "duplicates", "two_elements"]
+CASES = ["fatal_array", "empty_data", "single_element", "reversed_data", "already_sorted", "duplicates", "two_elements"]
 
 def test_selection_sort(fatal_array, empty_data, single_element, reversed_data, 
                         already_sorted, duplicates, two_elements):
-    Massive = [
+    test_cases = [
         copy.copy(fatal_array),    
         copy.copy(empty_data),
         copy.copy(single_element),
@@ -62,14 +62,14 @@ def test_selection_sort(fatal_array, empty_data, single_element, reversed_data,
     ]
 
 
-    for i in range(len(Massive)):
-        sortings.selection_sort(Massive[i])
-        assert all(x <= y for x, y in pairwise(Massive[i])), f"Failed on {Case[i]}"
+    for i in range(len(test_cases)):
+        sortings.selection_sort(test_cases[i])
+        assert all(x <= y for x, y in pairwise(test_cases[i])), f"Failed on {CASES[i]}"
 
 
 def test_merge_sort(fatal_array, empty_data, single_element, reversed_data, 
                     already_sorted, duplicates, two_elements):
-    Massive = [
+    test_cases = [
         copy.copy(fatal_array),
         copy.copy(empty_data),
         copy.copy(single_element),
@@ -79,9 +79,9 @@ def test_merge_sort(fatal_array, empty_data, single_element, reversed_data,
         copy.copy(two_elements),
     ]
     
-    for i in range(len(Massive)):
-        sortings.merge_sort(Massive[i])
-        assert all(x <= y for x, y in pairwise(Massive[i])), f"Failed on {Case[i]}"
+    for i in range(len(test_cases)):
+        sortings.merge_sort(test_cases[i])
+        assert all(x <= y for x, y in pairwise(test_cases[i])), f"Failed on {CASES[i]}"
 
     
 
