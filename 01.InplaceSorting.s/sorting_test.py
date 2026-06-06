@@ -84,3 +84,4 @@ def test_merge_sort(fatal_array, empty_data, single_element, reversed_data,
         assert all(x <= y for x, y in pairwise(Massive[i])), f"Failed on {Case[i]}"
 
     
+
